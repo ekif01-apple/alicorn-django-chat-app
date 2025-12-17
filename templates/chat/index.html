@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="/static/chat/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Chat</div>
+    <div class="me">
+      {{ request.user.username }}
+      <a class="link" href="/logout/">Logout</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="title">대화방 목록</div>
+      </div>
+
+      <div id="convoList" class="list"></div>
+
+      <!-- 사용자 검색(새 DM) -->
+      <div class="new-dm">
+        <div class="search-box">
+          <input
+            id="userSearch"
+            placeholder="사용자 검색 (username/email)"
+            autocomplete="off"
+          />
+          <div id="userSearchResults" class="search-dropdown"></div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat">
+      <div class="chat-header">
+        <div id="chatTitle">대화 선택</div>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="composer">
+        <textarea id="msgBody" placeholder="message..."></textarea>
+        <button id="btnSend" type="button">보내기</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/chat/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+asgiref==3.11.0
+black==25.11.0
+click==8.1.8
+Django==4.2.27
+djangorestframework==3.16.1
+mypy_extensions==1.1.0
+packaging==25.0
+pathspec==0.12.1
+platformdirs==4.4.0
+python-dotenv==1.2.1
+pytokens==0.3.0
+sqlparse==0.5.4
+tomli==2.3.0
+typing_extensions==4.15.0
